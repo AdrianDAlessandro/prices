@@ -1,0 +1,2 @@
+# Keep the raw data byte-for-byte as downloaded, on every platform.
+data/raw/*.csv -text

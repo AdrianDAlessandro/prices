@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "prices"
+version = "0.1.0"
+description = "Daily stock prices from Yahoo Finance"
+readme = "README.md"
+authors = [{ name = "Jay DesLauriers" }]
+requires-python = ">=3.10"
+dependencies = ["pandas>=2.0", "matplotlib>=3.7"]
+
+[project.optional-dependencies]
+dev = ["pytest>=7"]
+mcp = ["mcp>=2,<3", "yfinance>=0.2.50"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
