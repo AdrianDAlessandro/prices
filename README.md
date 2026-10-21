@@ -29,6 +29,19 @@ from prices import load_prices
 aapl = load_prices("AAPL")
 ```
 
+## Plotting
+
+To compare all three stocks since 2024, run:
+
+```bash
+python scripts/plot_prices.py
+```
+
+The chart is saved to `figures/stock_prices_since_2024.png`. It shows each
+stock's dividend-adjusted price as a percentage change from its first available
+trading day in 2024, so the different currencies are comparable. Each stock is
+plotted on its own trading dates.
+
 ## Data
 
 The files in `data/raw/` are daily prices from 2 January 2024 to 31 December 2025, one file per ticker, downloaded on 14 October 2026 with [yfinance](https://github.com/ranaroussi/yfinance):
